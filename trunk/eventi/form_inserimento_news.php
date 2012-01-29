@@ -173,148 +173,103 @@ if (isset($_POST['invia_news'])) {		# Verifico l'attivazione del pulsante "Invia
 			//Creo la pagina relativa all'evento
 			$handle = fopen("./pagine_evento/evento_$now.php", "w+");
 			$filename = "./pagine_evento/evento_$now.php";
-			$parte1='<!-- Pagina evento -->
-				<!-- Autore: Marco Pavan - pavan.marco@email.it -->
-				<!-- Data: 28 sett 2010 -->
+			
+			$parte1='		
+				<!-- Pagina evento generata automaticamente -->
 				<?php
 				//Imposto due variabili di uso generale
 				$titolo_pagina = "Template - Pagina evento";
-				$pagina = "pagina_evento";
+				$pagina = "evento";
 				?>
 				
 				<!-- Dichiarazione del DOCTYPE -->
 				<?php include(\'../../includes/doctype.php\'); ?>
-				
 				<!-- Corpo del documento -->
 				<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 					
 					
 					<?php include(\'../../includes/tag_head.php\'); ?>
 					<body>	
-						<!-- Link per raggiungere direttamente il contenuto principale saltando le voci del menù -->
-						<p id="vaiAlCorpoCentrale"><a href="#supportingText">Vai al contenuto principale</a></p>	
-						<!-- Wrapper del contenuto della pagina -->
-						<div id="container">
-							<!-- Introduzione -->
-							<div id="intro"> 
-								<div id="intro_inner1">
-									<?php include(\'../../includes/menu_servizio.php\'); ?>			
-									<?php include(\'../../includes/searchEngine_interno.php\'); ?>
-									<!-- Breve riassunto degli argomenti o spazio per avvisi -->				
-									<!--<div id="quickSummary">-->
-										<!--<p class="p1"><span>Quick summary titolo</span></p>
-										<p class="p2"><span>Quick summary testo</span></p>-->	
-									<!--</div>-->
-									<!-- Fine riassunto degli argomenti o avvisi -->		
-									<div class="clear_both"></div>
+						<div id="header">
+							<div id="logo">
+								<h1><a href="/index.php">QUINTO RECINTO</a></h1>
+								<div><p><em><a href="/index.php">Wine bar &amp; Ristorantino</a></em></p></div>
+							</div>
+							<div id="menu">
+								<ul>
+									<li><a href="/index.php" class="first">Homepage</a></li>
+									<li><a href="/chi_siamo.php">Chi siamo</a></li>
+									<li><a href="/il_locale/il_locale.php">Il locale</a></li>
+									<li><a href="/eventi/eventi.php">Eventi</a></li>
+									<li><a href="/prenota/prenota.php">Prenota</a></li>
+									<li><a href="/mappa/mappa.php">Mappa</a></li>
+									<li><a href="/contatti/contatti.php">Contatti</a></li>
+								</ul>
+							</div>
+							<!-- end #menu -->
+						</div>
+						<!-- end #header -->
+						<hr />
+			';
+			
+			$linkImg1 = "";
+			$linkImg2 = "";
+			$linkImg3 = "";
+			$linkImg4 = "";
+			$linkImg5 = ""; 
+			if($nome_immagine1!='') {
+				$linkImg1="<img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine1\" />";
+			}
+			if($nome_immagine2!='') {
+				$linkImg2="<img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine2\" />";
+			}
+			if($nome_immagine3!='') {
+				$linkImg3="<img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine3\" />";
+			}
+			if($nome_immagine4!='') {
+				$linkImg4="<img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine4\" />";
+			}
+			if($nome_immagine5!='') {
+				$linkImg5="<img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine5\" />";
+			}
+		
+			$parte2="	
+						<div id=\"page\">
+							<div id=\"page-bgtop\">
+								<div id=\"content\">
+									<div><a href=\"/eventi/eventi.php\"><< Torna alla pagina Eventi</a></div>
+									<div class=\"post\">
+										<p class=\"meta\"><em><span class=\"date\">$data</span>$ora $luogo</em></p>
+										<h2 class=\"title\">$titolo</h2>
+										<div class=\"entry\"><p>$descrizione</p></div>
+										<div>
+											<span><strong>Contatto: </strong>$contatto</span><br/>
+											<span><strong>Link: </strong>$link1</span><br/>
+										</div>	
+										<div class=\"galleria_immagini_evento\">
+											$linkImg1
+											$linkImg2
+											$linkImg3
+											$linkImg4
+											$linkImg5
+										<div>						
+									</div>
 								</div>
-								<div id="intro_inner2">	
-									<?php include(\'../../includes/menu_orizzontale.php\'); ?>									
-									<?php include(\'../../includes/pageHeader.php\'); ?>
-									<!-- Breadcrums -->
-									<!--<div id="breadcrums">	
-										<p id="sei_in"><span>Sei in:</span></p>
-										<ul id="listaBreadcrums">
-											<li id="bread_1"><a title="Vai in home page" href="index.php">Home</a></li>
-											<li id="bread_2"><a title="Vai alla pagina 2" href="http://www.google.it">&gt;&gt; Pagina 2</a></li>
-											<li id="bread_3"><a title="Vai alla pagina 2" href="http://www.google.it">&gt;&gt; Pagina 3</a></li>
-										</ul>
-									</div>-->	
-									<!-- Fine breadcrums -->
-									<!-- Breve preambolo -->
-									<!--<div id="preamble"> -->
-										<!--<h3><span>Titolo preambolo</span></h3>
-										<p class="p1"><span>Preambolo paragrafo 1</span></p>
-										<p class="p2"><span>Preambolo paragrafo 2</span></p>
-										<p class="p3"><span>Preambolo paragrafo 3</span></p>-->
-									<!--</div>-->			
-									<!-- Fine preamble -->
-								</div>
-							</div>			
-							<!-- Fine introduzione -->
-							<div id="separator_1"><div id="inner1"></div></div>
-							<div id="separator_2"><div id="inner2"></div></div>
-							<!-- Wrapper corpo principale -->
-							<div id="wrapper_corpo_principale">
-								<div id="wrapper_inner">
-									<?php /*include(\'../../includes/colonnaSx.php\');*/ ?>	
-									<?php /*include(\'../../includes/colonnaDx.php\');*/ ?>	';
-			$parte2="<div class=\"news\">
-				<h3 id=$codice><span>$titolo</span></h3>
-				<p class=\"p1\">
-				<br/>
-				<span><strong>Data:</strong>$data</span><br/>
-				<span><strong>Ora:</strong>$ora</span><br/>
-				<span><strong>Luogo:</strong>$luogo</span><br/>
-				</p>
-				<p>
-				<span>$descrizione</span<br/>
-				</p>
-				<p>
-				<span><strong>Contatto:</strong>$contatto</span><br/>
-				<span><strong>Link:</strong>$link1</span><br/>
-				</p>
-				<div class=\"galleria_immagini_evento\">";
-				if($nome_immagine1!='') {
-					$parte3="<a href=\"./gallery2.php?evento=$codice&img=$immagine1&pagina=eventi\"><img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine1\" /></a>";
-				}
-				if($nome_immagine2!='') {
-					$parte4="<a href=\"./gallery2.php?evento=$codice&img=$immagine2&pagina=eventi\"><img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine2\" /></a>";
-				}
-				if($nome_immagine3!='') {
-					$parte5="<a href=\"./gallery2.php?evento=$codice&img=$immagine3&pagina=eventi\"><img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine3\" /></a>";
-				}
-				if($nome_immagine4!='') {
-					$parte6="<a href=\"./gallery2.php?evento=$codice&img=$immagine4&pagina=eventi\"><img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine4\" /></a>";
-				}
-				if($nome_immagine5!='') {
-					$parte7="<a href=\"./gallery2.php?evento=$codice&img=$immagine5&pagina=eventi\"><img  class=\"immagini_evento\" alt=\"\" src=\"../img/$nome_immagine5\" /></a>";
-				}
-			$parte6="</div>
-				<div class=\"clear_both\"></div>
-				</div>";
-			$parte6bis="<div class=\"like_facebook_evento\">
-					<script src=\"http://connect.facebook.net/en_US/all.js#xfbml=1\"></script>
-					<fb:like href=\"http://www.127.0.0.5/eventi/pagine_evento/evento_$codiceEvento.php\" show_faces=\"true\" width=\"450\" action=\"recommend\" font=\"arial\"></fb:like>';
-					</div>
-				</div>";
-			$parte7='<div class="clear_both"></div>
-								</div> <!--Fine wrapper inner-->
-							</div> <!-- Fine wrapper coprpo centrale -->
-							<div id="separator_3"><div id="inner3"></div></div>	
-							<?php include(\'../../includes/footer.php\'); ?>
-							<?php include(\'../../includes/footer2.php\'); ?>
-						</div>		
-						<!-- Fine container -->			
-						<!-- LinkList (menu di navigazione) -->
-				<!-- 		<div id="linkList"> -->
-							<!-- Menu di navigazione 1 -->
-							<?php /*include(\'/includes/Navigation1.php\');*/ ?>	
-							<!-- LinkList2 (menu2) -->		
-				<!-- 			<div id="linkList2">	 -->
-								<!-- Menu di selezione per CSS di tipo ZenGarden -->	
-								<!-- Menu di navigazione 1bis -->
-								<?php /*include(\'../../includes/Navigation1.php\');*/ ?>	
-								<!-- Menu di navigazione 1 per menu a comparsa -->
-								<?php /*include(\'../../includes/Navigation_comparsa.php\');*/ ?>		
-								<!-- Menu di navigazione 2 -->
-								<?php /*include(\'../../includes/Navigation2.php\');*/ ?> 
-								<!-- Menu di navigazione 3 -->
-								<?php /*include(\'../../includes/Navigation3.php\');*/ ?>			
-				<!-- 			</div>	 -->
-							<!-- Fine div linkList2 (menu2) -->
-				<!-- 		</div>	 -->
-						<!-- Fine linkList (menu) -->
-						<!-- Sezioni div extra per immagini, toolbox etc...
-						<div id="extraDiv1"><span></span></div><div id="extraDiv2"><span></span></div><div id="extraDiv3"><span></span></div>
-						<div id="extraDiv4"><span></span></div><div id="extraDiv5"><span></span></div><div id="extraDiv6"><span></span></div>
-						-->
-						<!-- Inserimento codice StatCounter -->
-						<?php include(\'../../includes/statCounterCode.php\'); ?>
-						<!-- Fine codice StatCounter -->
+								<!-- end #content -->
+								<div style=\"clear: both;\">&nbsp;</div>
+							</div>
+							<!-- end #page -->		
+						</div>
+			";
+			
+			$parte3='			
+						<?php include(\'../includes/footer.php\'); ?>
+						<?php include(\'../includes/statCounterCode.php\'); ?>
 					</body>
 				</html>
-				<!--fine pagina evento -->';
+				<!--fine home page -->	
+			';		
+			
 
 			// Let's make sure the file exists and is writable first.
 			if (is_writable($filename)) {
@@ -328,7 +283,8 @@ if (isset($_POST['invia_news'])) {		# Verifico l'attivazione del pulsante "Invia
 			}
 		
 			// Write $somecontent to our opened file.
-			if (fwrite($handle, $parte1) === FALSE || fwrite($handle, $parte2) === FALSE || fwrite($handle, $parte3) === FALSE || fwrite($handle, $parte4) === FALSE || fwrite($handle, $parte5) === FALSE || fwrite($handle, $parte6) === FALSE || fwrite($handle, $parte6bis) === FALSE  ||fwrite($handle, $parte7) === FALSE ){
+			//if (fwrite($handle, $parte1) === FALSE || fwrite($handle, $parte2) === FALSE || fwrite($handle, $parte3) === FALSE || fwrite($handle, $parte4) === FALSE || fwrite($handle, $parte5) === FALSE || fwrite($handle, $parte6) === FALSE || fwrite($handle, $parte6bis) === FALSE  ||fwrite($handle, $parte7) === FALSE ){
+			if (fwrite($handle, $parte1) === FALSE || fwrite($handle, $parte2) === FALSE || fwrite($handle, $parte3) === FALSE ) {
 				echo "Cannot write to file ($filename)";
 				exit;
 			}

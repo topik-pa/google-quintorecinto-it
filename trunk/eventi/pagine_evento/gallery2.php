@@ -9,12 +9,9 @@ $img = $_GET[img];		//immagine da visualizzare
 $codice_evento_corrente = $_GET[evento];	//codice evento
 $numero_immagini = 5;		//numero totale delle immagini nella pagina
 
-if($pagina=="index") {		//la pagina index.php risiede nella cartella principale (non in una sottocartella): deve essere trattata diversamente dalle altre
-	$torna = "index.php"; 
-}
-else {
-	$torna = $pagina . ".php" . '#' . $codice_evento_corrente;
-}
+
+$torna = $pagina . ".php" . '#' . $codice_evento_corrente;
+
 $next = "\"gallery.php?pagina=" . $pagina . "&img=" . ($img+1) . "\"";		//percorso del link per l'immagine successiva
 $prev = "\"gallery.php?pagina=" . $pagina . "&img=" . ($img-1) . "\"";		//percorso del link per l'immagine precedente
 $percorso_img = "img/" . $img;		//percorso della immagine all'interno della sottocartella

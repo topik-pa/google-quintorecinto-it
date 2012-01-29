@@ -1,0 +1,515 @@
+/*
+Stile V recinto
+*/
+
+
+
+/*Regole generali*/
+body {
+margin: 0;
+padding: 0;
+/*font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;*/
+font-family: sans-serif;
+color: #000000;
+background-color: #FFFFFF;
+
+}
+
+.float_left{
+float:left;
+}
+.float_right{
+float:right;
+}
+.clear_both {
+clear:both;
+}
+
+#vaiAlCorpoCentrale {
+display: none;
+margin: 0;
+}
+
+
+
+/*Regole tipografiche */
+h1 {
+color: #FFFFFF;
+padding: 0;
+margin: 0;
+text-shadow: #000000 2px 2px;
+font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+font-size: 250%;
+}
+
+
+h2 {
+color: #FFFFFF;
+padding: 0;
+margin: 0;
+text-shadow: #000000 2px 2px;
+font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+font-size: 150%;
+}
+
+h3 { 
+padding: 0;
+margin: 0;
+color: #33CCCC;
+}
+
+h4 {
+margin: 0;
+}
+
+p {
+margin: 0;
+padding: 0;
+}
+
+ul {
+margin: 0;
+padding: 0;
+}
+
+a {
+color: #990000;
+}
+a:visited {
+text-decoration: none;
+}
+a:link {
+text-decoration: none;
+}
+a img {
+border: 0;
+}
+
+
+
+/*Regole per l'header*/
+#intro {
+}
+
+#menu_orizzontale {
+margin-left: 1em;
+}
+
+#container {
+background-color: #888888;
+background: -moz-linear-gradient(bottom, #888888, #FFFFFF);
+background: -webkit-gradient(linear, center bottom, center top, from(#FFFFFF), to(#888888)); 
+/*background-image: url(/img/bg3.png);*/
+}
+#btn_search {
+background-color: #CC3333;
+border: 1px solid #000000;
+color: white;
+padding: 1px;
+
+background: -moz-radial-gradient( 50% 50%, circle, #CC3333 200px, #FF8888 600px );
+}
+
+#input_search {
+border: medium none;
+padding: 3px;
+}
+
+#intro_inner1 {
+background-color: #88FFFF;
+padding-left: 8%;
+padding-right: 8%;
+padding-bottom: 10px;
+padding-top: 30px;
+
+background: -moz-radial-gradient( 50% 50%, circle, #33CCCC 100px, #88FFFF 300px );
+background: -webkit-gradient(radial, center bottom, center top, from(#990000), to(#CC3333));
+/*background-image: url(/img/bg1.png);*/
+}
+
+#intro_inner2 {
+background-color: #CC3333;
+padding-left: 8%;
+padding-right: 8%;
+padding-top: 1em;
+
+background: -moz-radial-gradient( 50% 50%, circle, #33CCCC 100px, #88FFFF 800px );
+background: -webkit-gradient(radial, center bottom, center top, from(#990000), to(#CC3333));
+/*background-image: url(/img/bg1.png);*/
+}
+
+#wrapper_corpo_principale {
+padding-left: 8%;
+padding-right: 8%;	
+}
+
+#lista_menu_servizio {
+float: left;
+font-size: 80%;
+color: #000000;
+font-weight: bold;
+}
+
+#form_searchEngine {
+float: right;
+}
+
+#form_searchEngine p {
+display: inline;
+}
+
+#lista_menu_servizio li {
+display: inline;
+list-style-type: none;
+}
+
+#lista_menu_servizio a {
+color: #000000;
+}
+
+#lista_menu_orizzontale {
+padding-bottom: 3px;
+padding-top: 3px;
+font-size: 100%;
+}
+
+#lista_menu_orizzontale li {
+display: inline;
+list-style-type: none;
+margin-right: 2em;
+font-weight: bold;
+font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+#pageHeader {
+background-color: #FF8888;
+/*padding-bottom: 1em;*/
+padding-left: 2em;
+/*padding-top: 1em;*/
+
+background: -moz-radial-gradient( 50% 10%, circle, #00AAAA 50px, #33CCCC 250px );
+background: -webkit-gradient(radial, center bottom, center top, from(#CC3333), to(#FF6666));
+/*background-image: url(/img/bg2-2.png);*/
+}
+
+#menu_orizzontale a {
+color: #000000;
+}
+
+
+
+/*Contenuto del blocco centrale (contenuto principale)*/
+#supportingText {
+padding-left: 4em;
+padding-top: 4em;
+width: 60%;
+font-size: 90%;
+}
+
+#supportingText p{
+color: #7E816E;
+}
+
+#wrapper_inner {
+background-color: #FFFFFF;
+padding-bottom: 4em;
+}
+
+#foto1_home {
+width: 250px;
+float: left;
+margin-top: 1em;
+margin-right: 1em;
+margin-bottom: 2em;
+}
+
+.box_home {
+float: left;
+margin-right: 2em;
+margin-top: 4em;
+width: 25%;
+
+}
+.head_box_home {
+border-bottom: 10px solid #CC3333;
+
+}
+.head_box_home h4 {
+}
+.body_box_home {
+padding: 1em;
+text-align: center;
+background-color: #FFEEEE;
+font-size: 80%;
+}
+
+.img_box_home {
+
+}
+.img_box_home img {
+border: 1px solid #CC3333;
+height: 80px;
+padding: 9px;
+width: 90%;
+}
+
+.text_box_home {
+
+}
+
+.footer_box_home {
+border-top: 2px solid red;
+padding: 1em 2em;
+background-color: #CC3333;
+}
+.footer_box_home a {
+color: #FFFFFF;
+} 
+
+/*Colonna sinistra*/
+
+
+
+/*Colonna destra*/
+#wrapper_colonnaDx {
+-moz-box-shadow: 0px 0px 15px #AAAAAA;
+-webkit-box-shadow: 0px 0px 15px #AAAAAA;
+box-shadow: 0px 0px 15px #AAAAAA;
+border-top: 1px solid #000000;
+border-top: 1px solid white;
+margin-bottom: 2em;
+}
+
+#colonnaDx {
+float: right;
+font-size: 80%;
+background-color: #FFFFFF;
+width: 25%;
+position: relative;
+right: 3em;
+top: -4em;
+}
+
+#colonnaDx_eventi {
+background-color: #FFFFFF;
+float: right;
+font-size: 80%;
+position: fixed;
+right: 8%;
+width: 25%;
+z-index: 1;
+}
+
+#colonnaDx_eventi h3 {
+margin-top: 2em;
+background-color: #FF5555;
+color: #FFFFFF;
+}
+
+#titolo_colonnaDx {
+background-color: #88FFFF;
+padding-bottom: 1em;
+padding-left: 1em;
+padding-top: 1em;
+color: #FFFFFF;
+font-weight: bold;
+font-size: 120%;
+
+background: -moz-linear-gradient(bottom, #88FFFF, #33CCCC);
+background: -webkit-gradient(linear, center bottom, center top, from(#CC3333), to(#990000)); 
+-moz-box-shadow: 0px 0px 20px #333333;
+-webkit-box-shadow:0px 0px 20px #333333;
+box-shadow:0px 0px 20px #333333;
+}
+
+#wrapper_colonnaDx_proposte {
+-moz-box-shadow: 0px 0px 15px #AAAAAA;
+-webkit-box-shadow: 0px 0px 15px #AAAAAA;
+box-shadow: 0px 0px 15px #AAAAAA;
+border-top: 1px solid #000000;
+border-top: 1px solid white;
+}
+
+#wrapper_colonnaDx_eventi {
+-moz-box-shadow: 0px 0px 15px #AAAAAA;
+-webkit-box-shadow: 0px 0px 15px #AAAAAA;
+box-shadow: 0px 0px 15px #AAAAAA;
+border-top: 1px solid #000000;
+border-top: 1px solid white;
+}
+
+#colonnaDx_proposte {
+float: right;
+font-size: 80%;
+background-color: #FFFFFF;
+width: 25%;
+position: relative;
+right: 3em;
+}
+
+#titolo_colonnaDx_proposte {
+padding-bottom: 1em;
+padding-left: 1em;
+padding-top: 1em;
+color: #262E00;
+font-weight: bold;
+font-size: 120%;
+}
+
+#titolo_colonnaDx_eventi {
+padding-bottom: 1em;
+padding-left: 1em;
+padding-top: 1em;
+color: #262E00;
+font-weight: bold;
+font-size: 120%;
+}
+
+.banner {
+margin: 1em;
+text-align: center;
+}
+
+.banner h3 {
+text-transform: uppercase;
+margin-bottom: 1em;
+}
+
+.img_banner {
+height: 50px;
+width: 100%;
+}
+
+.banner_text {
+border-bottom: 1px solid #DDDDDD;
+border-top: 1px solid #DDDDDD;
+text-align: center;
+background-color: #CC3333;
+}
+.banner_text a {
+color: #FFFFFF;
+font-weight: bold;
+text-decoration: underline;
+}
+
+#banner_catering .banner_text{
+background-color:  #33CCCC;
+color: #FFFFFF;
+}
+
+.galleria_immagini_evento img{
+width: 20%;
+margin: 1em;
+}
+
+.news {
+margin: 1em 1em 2em 1em;
+padding-bottom: 5px;
+border-bottom: 1px solid #000000;
+}
+
+.lista_link_suggeriti {
+list-style-type: none;
+}
+.lista_link_suggeriti li {
+margin-bottom: 1em;
+margin-top: 1em;
+}
+.lista_link_suggeriti img {
+width: 100px;
+margin-bottom: 2em;
+margin-right: 5px;
+}
+
+.msg_errore {
+color: #FF0000 !important;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+
+/*Footer */
+#footer {
+background-color: #CC3333;
+left: 8%;
+position: relative;
+width: 84%;
+font-size: 85%;
+
+background: -moz-linear-gradient(bottom, #33CCCC, #00AAAA);
+background: -webkit-gradient(linear, center bottom, center top, from(#FF6666), to(#CC3333)); 
+}
+
+#footer_2 {
+font-size: 85%;
+margin-top: 2em;
+}
+#footer_2 a {
+color: #FFFFFF;
+}
+
+#committente {
+padding: 1em 0 1em 4em
+}
+
+#footer_committente {
+font-size: 110%;
+font-weight: bold;
+padding-bottom: 1em;
+color: #262E00;
+}
+
+#footer_indirizzo {
+color: #FFFFFF;
+}
+#footer_orario {
+color: #FFFFFF;
+}
+
+#autore {
+text-align: center;
+font-size: 80%
+}
+
+#conformita {
+text-align: center;
+font-size: 80%
+}
+
+
+
+/*Altro*/
+#separator_1 {
+background-color: #88FFFF;
+height: 15px;
+}
+#inner1 {
+background-color: #33CCCC;
+height: 15px;
+position: relative;
+left: 8%;
+width: 84%;	
+}
+#separator_2 {
+background-color: #BBBBBB;
+height: 15px;
+border-top: 1px solid #FFFFFF;
+}
+#inner2 {
+background-color: #EEEEEE;
+height: 15px;
+position: relative;
+left: 8%;
+width: 84%;	
+}
+#separator_3 {
+background-color: #555555;
+height: 15px;
+}
+#inner3 {
+background-color: #EEEEEE;
+height: 15px;
+position: relative;
+left: 8%;
+width: 84%;
+}
